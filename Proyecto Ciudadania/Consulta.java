@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Consulta {
 
@@ -6,14 +6,23 @@ public class Consulta {
     private String nombre;
     private String fecha;
     private int cantDeVotos;
-    private ArrayList<Voto> votos;
+    private HashMap<String, Voto> votos;
 
+    //=========== Builder ==============\\
     
-    
-    
-    
-    
-    //===========Getters==============
+    public Consulta(int id, String nombre, String fecha, int cantDeVotos){
+        this.id = id;
+        this.nombre = nombre;
+        this.fecha = fecha;
+        this.cantDeVotos = cantDeVotos;
+        votos = new HashMap<String,Voto>();
+    }
+   
+
+
+
+   
+    //=========== Getters ==============\\
     public int getId(){
         return id;
     }
@@ -30,11 +39,11 @@ public class Consulta {
         return cantDeVotos;
     }
 
-    public ArrayList<Voto> getVotos() {
+    public HashMap<String, Voto> getVotos() {
         return votos;
     }
 
-    // Setters
+    //===========Setters==============\\
     public void setId(int id) {
         this.id = id;
     }
@@ -51,8 +60,47 @@ public class Consulta {
         this.cantDeVotos = cantDeVotos;
     }
 
-    public void setVotos(ArrayList<Voto> votos) {
+    public void setVotos(HashMap<String,Voto> votos) {
         this.votos = votos;
+    }
+
+    //=========== Métodos ==============\\
+    
+
+
+    public void agregarVoto(Votos voto){
+        votos.put(voto.getId(), voto);
+        cantDeVotos++;
+
+
+    }
+
+    // Proximamente eliminar //
+
+    public Votos obtenerVoto(String idVoto) {
+        return votos.get(idVoto);
+    }
+
+
+    public int contarVotos(){
+        return votos.size();
+    }
+
+    public void mostrarConsulta(){
+        System.out.println("Consulta ID: " + id);
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Fecha: " + fecha);
+        System.out.println("Cantidad de Votos: " + cantDeVotos);
+
+        if(votos.isEmpty()){
+            System.out.println("No hay votos disponibles");
+        }
+        else{
+            System.out.println("Votos:");
+            
+
+        }
+
     }
     
 }
