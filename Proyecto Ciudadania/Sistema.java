@@ -1,9 +1,15 @@
 import java.io.*;
 import java.lang.*;
+import java.util.*;
 
 
 public class Sistema{
-    public static void main(String[] args) throws IOException{
+    static private ArrayList<Consulta> consultas = new ArrayList<Consulta>;
+
+
+
     
+    public static void main(String[] args) throws IOException{
+        
     } 
 }
