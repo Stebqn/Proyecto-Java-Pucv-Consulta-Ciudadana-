@@ -6,7 +6,13 @@ Principalmente en crear un software para reconocer opiniones populares por parte
 como:
 
 -Gestionar consultas
+
+
 -Agregar/Eliminar Votos de una consulta
+
+
 -Ver estado de una consulta
+
+
 -Leer voto(s)
 
