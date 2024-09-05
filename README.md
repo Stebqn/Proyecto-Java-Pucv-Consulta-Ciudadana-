@@ -7,4 +7,6 @@ como:
 
 -Gestionar consultas
 -Agregar/Eliminar Votos de una consulta
+-Ver estado de una consulta
+-Leer voto(s)
 
