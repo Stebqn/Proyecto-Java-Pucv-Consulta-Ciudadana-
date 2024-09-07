@@ -10,12 +10,12 @@ public class Consulta {
 
     //=========== Builder ==============\\
     
-    public Consulta(int id, String nombre, String fecha, int cantDeVotos){
+    public Consulta(int id, String nombre, String fecha){
         this.id = id;
         this.nombre = nombre;
         this.fecha = fecha;
-        this.cantDeVotos = cantDeVotos;
-        votos = new HashMap<String,Voto>();
+        this.cantDeVotos = 0;
+        this.votos = new HashMap<String,Voto>();
     }
      
     //=========== Getters ==============\\
@@ -82,21 +82,19 @@ public class Consulta {
         
         boolean agregado = verificarVoto(nuevoVoto);
 
-        if(agregado == true){
-            return true;
-        }
-        return false;
+        return agregado;
     }
-
-
-
+    
     // Proximamente eliminar //
 
+
+
+    //ARREGLAR
     public Voto obtenerVoto(int idVoto) {
         Voto votoRevision = new Voto();
         votoRevision.setId(idVoto);
-        
-        return votos.get(String.valueOf(idVoto)); 
+
+        return votos.get(String.valueOf(idVoto));
     }
 
     public Voto obtenerVoto(String rut){
@@ -105,6 +103,39 @@ public class Consulta {
         return votos.get(String.valueOf(rut));
     }
 
+    public void mostrarVoto(int idVoto){
+        Voto votoMostrar = obtenerVoto(idVoto);
+
+        if(votoMostrar != null){
+            System.out.println("Id Voto : " + votoMostrar.getId());
+            System.out.println("Rut Votante : " + votoMostrar.getRut());
+
+            if(votoMostrar.getveredicto()) {
+                System.out.println("Veredicto : Apruebo");
+            }else{
+                System.out.println("Veredicto : Rechazo");
+            }
+        }else{
+            System.out.println("El id ingresado no existe");
+            return;
+        }
+    }
+
+    public void mostrarVoto(String rut){
+        Voto votoMostrar2 = obtenerVoto(rut);
+        if(votoMostrar2 != null){
+            System.out.println("Id Voto : " + votoMostrar2.getId());
+            System.out.println("Rut Votante : " + votoMostrar2.getRut());
+
+            if(votoMostrar2.getveredicto()) {
+                System.out.println("Veredicto : Apruebo");
+            }else{
+                System.out.println("Veredicto : Rechazo");
+            }
+        }else{
+
+        }
+    }
 
     public int contarVotos(){
         return votos.size();
@@ -133,20 +164,16 @@ public class Consulta {
             for (String key : votos.keySet()) {  
                 Voto voto = votos.get(key);       
                 
-                // Imprimiendo la salida en el formato que solicitas
                 System.out.println("Id Voto : " + voto.getId());
                 System.out.println("Rut Votante : " + voto.getRut());
                 
-                // Usando if-else para determinar el veredicto
                 if (voto.getveredicto()) {
                     System.out.println("Veredicto : Apruebo");
                 } else {
                     System.out.println("Veredicto : Rechazo");
                 }
-
                 System.out.println();  
             }
         }
     }
-    
 }
