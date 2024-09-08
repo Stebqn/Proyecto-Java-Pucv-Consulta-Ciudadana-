@@ -28,7 +28,7 @@ public class Sistema {
 
     public static void menuDeInicio(BufferedReader lector, ArrayList consultas) throws IOException {
         int opcion;
-        System.out.println("Ingrese 1 para inciar el menu Prinipal");
+        System.out.println("Ingrese (1) para iniciar el menú Prinipal");
         opcion = Integer.parseInt(lector.readLine());
 
         switch (opcion) {
@@ -39,7 +39,7 @@ public class Sistema {
                 System.out.println("Gracias por su visita!");
                 break;
             default:
-                System.out.println("Ingrese una opcion valida");
+                System.out.println("Ingrese una opción válida");
                 menuConsulta(lector, consultas);
                 break;
         }
@@ -49,7 +49,7 @@ public class Sistema {
         int opcion;
 
         do {
-            System.out.println("Bienvenido al menu de consultas!");
+            System.out.println("Bienvenido al menú de consultas!");
             System.out.println("¿Que desea realizar?\n");
 
             System.out.println("1. Ingresar a una consulta");
@@ -61,7 +61,7 @@ public class Sistema {
                     int idConsulta;
                     Consulta consulta;
 
-                    System.out.println("Ingrese el id del consulta");
+                    System.out.println("Ingrese el id de la consulta");
                     idConsulta = Integer.parseInt(lector.readLine());
 
                     consulta = buscarConsulta(consultas,idConsulta);
@@ -72,7 +72,7 @@ public class Sistema {
                     System.out.println("Gracias por su visita!");
                     break;
                 default:
-                    System.out.println("Ingrese una opcion valida");
+                    System.out.println("Ingrese una opción válida");
                     menuDeInicio(lector, consultas);
                     break;
             }
@@ -83,7 +83,7 @@ public class Sistema {
         int opcion;
 
         do {
-            System.out.println("Bienvenido se encuentra en el menu de consultas profesional");
+            System.out.println("Bienvenido se encuentra en el menú de consultas profesional");
             System.out.println("¿Que desea realizar?\n");
 
             System.out.println("1. Crear un voto");
@@ -102,7 +102,7 @@ public class Sistema {
                     System.out.println("Ingrese el id del nuevo voto");
                     idVotoNuevo = Integer.parseInt(lector.readLine());
 
-                    System.out.println("Ingrese el rut del votante sin puntos y con digito vereficador");
+                    System.out.println("Ingrese el rut del votante sin puntos y con dígito verificador");
                     RutNuevo = lector.readLine();
 
                     System.out.println("Ingrese el veredicto del voto (Apruebo o Rechazo)");
@@ -113,7 +113,7 @@ public class Sistema {
                     } else if (veredicto.equals("Rechazo")) {
                         veredictoNuevo = false;
                     } else {
-                        System.out.println("Entrada de datos no valida, por favor ingrese nuevamente.");
+                        System.out.println("Entrada de datos no válida, por favor ingrese nuevamente.");
                         break;
                     }
 
@@ -125,17 +125,17 @@ public class Sistema {
                     System.out.println("Listado de votos terminado!");
                     break;
                 case 3:
-                    System.out.println("Ingrese el metodo de busqueda (1-Mediante id o 2- Mediante RUT)");
+                    System.out.println("Ingrese el método de búsqueda (1-Mediante id o 2- Mediante RUT)");
                     int opcion2 = Integer.parseInt(lector.readLine());
 
                     if(opcion2 == 1){
                         System.out.println("Ingrese el id del voto");
                         consulta.mostrarVoto(Integer.parseInt(lector.readLine()));
                     }else if(opcion2 == 2){
-                        System.out.println("Ingrese el RUT del votante sin puntos y con digito verficador");
+                        System.out.println("Ingrese el RUT del votante sin puntos y con dígito verificador");
                         consulta.mostrarVoto(lector.readLine());
                     }else{
-                        System.out.println("Ingrese una opcion valida, vuelva intentarlo");
+                        System.out.println("Ingrese una opción válida, vuelva a intentarlo");
                         break;
                     }
                     System.out.println("Consulta Exitosa!");
