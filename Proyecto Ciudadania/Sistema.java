@@ -73,7 +73,7 @@ public class Sistema {
                     break;
                 default:
                     System.out.println("Ingrese una opción válida");
-                    menuDeInicio(lector, consultas);
+                    menuConsulta(lector, consultas);
                     break;
             }
         }while(opcion != 0);
