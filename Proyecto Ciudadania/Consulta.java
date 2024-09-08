@@ -85,16 +85,14 @@ public class Consulta {
         return agregado;
     }
     
-    // Proximamente eliminar //
-
-
-
-    //ARREGLAR
     public Voto obtenerVoto(int idVoto) {
-        Voto votoRevision = new Voto();
-        votoRevision.setId(idVoto);
-
-        return votos.get(String.valueOf(idVoto));
+        for (String rut : votos.keySet()) {
+            Voto voto = votos.get(rut);
+            if (voto.getId() == idVoto) {
+                return voto;  // Retorna el voto si el id coincide
+            }
+        }
+        return null;  // Retorna null si no se encuentra el voto
     }
 
     public Voto obtenerVoto(String rut){
@@ -176,4 +174,6 @@ public class Consulta {
             }
         }
     }
+
+    // PROXIMAMENTE METODOS ELIMINAR \\
 }
