@@ -143,13 +143,11 @@ public class Consulta {
         System.out.println("Consulta ID: " + id);
         System.out.println("Nombre: " + nombre);
         System.out.println("Fecha: " + fecha);
-        System.out.println("Cantidad de Votos: " + cantDeVotos);
-
         if(votos.isEmpty()){
             System.out.println("No hay votos disponibles");
         }
         else{
-            System.out.println("Votos:");
+            System.out.println("Cantidad de Votos: " + cantDeVotos);
     
         }
 
