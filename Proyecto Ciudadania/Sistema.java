@@ -28,7 +28,7 @@ public class Sistema {
 
     public static void menuDeInicio(BufferedReader lector, ArrayList consultas) throws IOException {
         int opcion;
-        System.out.println("Ingrese (1) para iniciar el menú Prinipal");
+        System.out.println("Ingrese (1) para iniciar el menú Prinipal o 0 para no iniciar");
         opcion = Integer.parseInt(lector.readLine());
 
         switch (opcion) {
@@ -37,7 +37,7 @@ public class Sistema {
                 break;
             case 0:
                 System.out.println("Gracias por su visita!");
-                break;
+                return;
             default:
                 System.out.println("Ingrese una opción válida");
                 menuConsulta(lector, consultas);
@@ -66,11 +66,17 @@ public class Sistema {
 
                     consulta = buscarConsulta(consultas,idConsulta);
 
-                    menuPrincipal(lector,consulta);
-                    break;
+                    if(consulta != null){
+                        menuPrincipal(lector, consulta);
+                        break;
+                    }else{
+                        System.out.println("Id consulta invalido, intentelo nuevamente");
+                        menuConsulta(lector, consultas);
+                        break;
+                    }
                 case 0:
                     System.out.println("Gracias por su visita!");
-                    break;
+                    return;
                 default:
                     System.out.println("Ingrese una opción válida");
                     menuConsulta(lector, consultas);
@@ -142,7 +148,7 @@ public class Sistema {
                     break;
                 case 0:
                     System.out.println("Saliendo...");
-                    break;
+                    return;
                 default:
                     System.out.println("Opción no válida. Intente nuevamente.");
                     break;
