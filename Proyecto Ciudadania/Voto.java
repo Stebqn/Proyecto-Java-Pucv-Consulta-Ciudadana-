@@ -125,4 +125,3 @@ public class Voto {
         }while (opcion != 0);
     }        
 }
-
