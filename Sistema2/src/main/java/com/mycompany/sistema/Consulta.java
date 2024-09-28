@@ -118,6 +118,7 @@ public class Consulta {
             }
         }else{
             System.out.println("El id ingresado no existe");
+            return;
         }
     }
 
@@ -175,5 +176,20 @@ public class Consulta {
         }
     }
 
-    // PROXIMAMENTE METODOS ELIMINAR \\
+    public void eliminarVoto(String rut){
+        if(votos.containsKey(rut)){
+            votos.remove(rut);
+        }
+    }
+    
+    public void modificarVoto(int idNuevo, String rutVotante, boolean veredictoNuevo){
+        if(votos.get(rutVotante) != null){
+            Voto votoModificar = votos.get(rutVotante);
+            
+            votoModificar.setId(idNuevo);
+            votoModificar.setveredicto(veredictoNuevo);
+            
+            votos.put(rutVotante, votoModificar);
+        } 
+    }
 }
