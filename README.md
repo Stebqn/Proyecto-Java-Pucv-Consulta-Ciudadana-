@@ -1,6 +1,6 @@
 _**PROYECTO DE JAVA PUCV**_
 
-Es un proyecto enfocado en la creacion de software en el lenguaje de programacion Java. 
+Es un proyecto enfocado en la creacion de software en el lenguaje de programacion Java (utilizando Maven). 
 
 El software esta enfocado en facilitar la gestión de opiniones respecto a posibles políticas/leyes,normas,etc. Este software constará principalmente de funcionalidades
 como:
