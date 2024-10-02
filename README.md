@@ -1,18 +1,23 @@
 _**PROYECTO DE JAVA PUCV**_
 
-Es un proyecto enfocado en la creacion de software en el lenguaje de programacion "JAVA". 
+Es un proyecto enfocado en la creacion de software en el lenguaje de programacion Java. 
 
-Principalmente en crear un software para reconocer opiniones populares por parte de la ciudadanía, este software constará de funcionnalidades
+El software esta enfocado en facilitar la gestión de opiniones respecto a posibles políticas/leyes,normas,etc. Este software constará principalmente de funcionalidades
 como:
 
--Gestionar consultas
+-Buscar consulta/voto por ID.
 
 
--Agregar/Eliminar Votos de una consulta
+-Agregar/Eliminar Votos de una consulta en específica.
 
 
--Ver estado de una consulta
+-Ver estado de una consulta (Opinión popular).
 
 
--Leer voto(s)
+_**Instalación (NetBeans IDE 21 y JDK 22.0.2)**_
+
+
+
+Descargar zip del proyecto (main branch) y descomprimir en una carpeta, posteriormente
+
 
