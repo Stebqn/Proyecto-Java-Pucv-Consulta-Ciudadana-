@@ -18,6 +18,6 @@ _**Instalación (NetBeans IDE 21 y JDK 22.0.2)**_
 
 
 
-Descargar zip del proyecto (main branch) y descomprimir en una carpeta, posteriormente
+Descargar zip del proyecto (main branch) y descomprimir en una carpeta, posteriormente abrir NetBeans (Por lo visto se puede utilizar versión 21, pero para que funcione correctamente utilice la versión 21) y buscar la carpeta donde se descomprimió el zip, dentro de esa carpeta netbeans automáticamente reconocerá el archivo como un proyecto y podrá iniciarlo en la clase Sistema.java
 
 
