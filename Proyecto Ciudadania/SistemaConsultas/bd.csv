@@ -1,0 +1,19 @@
+consulta_id,consulta_nombre,consulta_fecha,consulta_cantVotos,voto_rut,voto_nombres,voto_edad,voto_genero,voto_veredicto
+1,Elección 2024,2024-10-01,150,12345678-5,Juan Perez,30,M,true
+1,Elección 2024,2024-10-01,150,98765432-1,Maria Gomez,25,F,false
+1,Elección 2024,2024-10-01,150,12312312-9,Carlos Ruiz,45,M,true
+1,Elección 2024,2024-10-01,150,87654321-4,Ana Torres,35,F,true
+2,Referéndum,2024-11-05,200,11222333-6,Lucia Fernanda,34,F,false
+2,Referéndum,2024-11-05,200,33445566-2,Roberto Diaz,28,M,true
+2,Referéndum,2024-11-05,200,55667788-0,Angela Soto,41,F,true
+3,Votación Extra,2024-12-01,50,55443322-1,Daniel Gutierrez,38,M,false
+3,Votación Extra,2024-12-01,50,77665544-5,Mariana Silva,29,F,true
+3,Votación Extra,2024-12-01,50,99887766-3,Alberto Sánchez,47,M,true
+4,Elección Local,2025-01-15,100,11112222-8,Lucia Mendez,23,F,false
+4,Elección Local,2025-01-15,100,22223333-7,Pedro Benitez,50,M,true
+4,Elección Local,2025-01-15,100,33334444-5,Carla Rivera,35,F,false
+4,Elección Local,2025-01-15,100,44445555-0,Enrique Herrera,40,M,true
+5,Consulta Pública,2025-02-10,120,55556666-4,Sofia Morales,32,F,false
+5,Consulta Pública,2025-02-10,120,66667777-9,Martin Ponce,37,M,true
+5,Consulta Pública,2025-02-10,120,77778888-6,Laura Rosales,28,F,false
+5,Consulta Pública,2025-02-10,120,88889999-3,Victor Maldonado,60,M,true
